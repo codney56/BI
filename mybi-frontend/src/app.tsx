@@ -4,7 +4,7 @@ import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { SettingDrawer } from '@ant-design/pro-components';
 import type { RunTimeLayoutConfig } from '@umijs/max';
 import { Link, history } from '@umijs/max';
-import { errorConfig } from './requestErrorConfig';
+import { errorConfig } from './requestConfig';
 import { getLoginUserUsingGet } from './services/mybi/userController';
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
@@ -125,5 +125,6 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
  */
 export const request = {
   baseURL:'http://localhost:12345',
+  withCredentials: true,
   ...errorConfig,
 };
