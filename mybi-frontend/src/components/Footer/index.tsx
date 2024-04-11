@@ -9,25 +9,26 @@ const Footer: React.FC = () => {
         background: 'none',
       }}
       links={[
-        {
-          key: 'Ant Design Pro',
-          title: 'Ant Design Pro',
-          href: 'https://pro.ant.design',
-          blankTarget: true,
-        },
+        // {
+        //   key: '智能 BI',
+        //   title: '智能 BI',
+        //   href: 'https://github.com/codney56/BI',
+        //   blankTarget: true,
+        // },
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://github.com/ant-design/ant-design-pro',
+          href: 'https://github.com/codney56/BI',
           blankTarget: true,
         },
         {
-          key: 'Ant Design',
-          title: 'Ant Design',
-          href: 'https://ant.design',
+          key: '智能 BI',
+          title: '智能 BI',
+          href: 'https://github.com/codney56/BI',
           blankTarget: true,
         },
       ]}
+      copyright='2024 浦江智能BI'
     />
   );
 };
