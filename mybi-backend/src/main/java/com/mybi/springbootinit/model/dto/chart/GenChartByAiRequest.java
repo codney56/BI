@@ -1,27 +1,23 @@
 package com.mybi.springbootinit.model.dto.chart;
 
-import com.mybi.springbootinit.common.PageRequest;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
 /**
- * 查询请求
+ * 文件上传请求
  *
  * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class ChartQueryRequest extends PageRequest implements Serializable {
-
-    private Long id;
+public class GenChartByAiRequest implements Serializable {
 
     /**
      * 图标名称
      */
     private String name;
+
 
     /**
      * 分析目标
@@ -33,10 +29,7 @@ public class ChartQueryRequest extends PageRequest implements Serializable {
      */
     private String chartType;
 
-    /**
-     * 用户 id
-     */
-    private Long userId;
+
 
     private static final long serialVersionUID = 1L;
 }
