@@ -234,8 +234,14 @@ public class ChartController {
         //如果名称不为空，并且名称长度大于100，就抛出异常，并给出提示
         ThrowUtils.throwIf(StringUtils.isNotBlank(name) && name.length() > 100 ,ErrorCode.PARAMS_ERROR,"名称过长");
 
+        //用户输入
+        StringBuilder userInput = new StringBuilder();
+        userInput.append("你是一个数据分析师，接下来我会给你我的分析目标和原始数据，请告诉我分析结论。").append("\n");
+        userInput.append("分析目标:").append(goal).append("\n");
+        //压缩后的数据
         String result = ExcelUtils.excelToCsv(multipartFile);
-        return ResultUtils.success(result);
+        userInput.append("数据:").append(result).append("\n");
+        return ResultUtils.success(userInput.toString());
 //        //读取到用户上传的excel文件，进行处理
 //        User loginUser = userService.getLoginUser(request);
 //
