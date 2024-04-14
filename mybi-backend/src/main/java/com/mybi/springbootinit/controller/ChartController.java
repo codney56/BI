@@ -278,7 +278,7 @@ public class ChartController {
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "AI 生成错误");
         }
 
-        String genChart = splits[1].trim();
+        String genChart = splits[1].trim().replaceAll("'","\"");
         String genResult = splits[2].trim();
         //插入到数据库
         Chart chart = new Chart();
